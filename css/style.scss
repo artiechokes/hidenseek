@@ -1,0 +1,15 @@
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+
+.bgc-gray {
+  background-color: #e9e9e9;
+}
+
+.navbar {
+  height: 90px;
+
+  .container {
+    img {
+      height: 70px;
+    }
+  }
+}

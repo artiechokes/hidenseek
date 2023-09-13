@@ -1,0 +1,30 @@
+{
+  "dependencies": {
+    "bootstrap": "^5.3.1"
+  },
+  "name": "hidenseek",
+  "version": "1.0.0",
+  "description": "Welcome to the Ultimate Hide and Seek Park Experience! Explore our enchanting hide and seek wonderland online. Discover exciting hiding spots, thrilling games, and all the information you need for an unforgettable visit. Join the adventure today!",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/artiechokes/hidenseek.git"
+  },
+  "keywords": [
+    "static",
+    "website",
+    "html",
+    "css",
+    "javascript"
+  ],
+  "author": "Arturo J. Lainez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/artiechokes/hidenseek/issues"
+  },
+  "homepage": "https://github.com/artiechokes/hidenseek#readme"
+}
