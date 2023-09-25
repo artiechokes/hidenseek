@@ -17,11 +17,34 @@ const storeStatus = window.addEventListener("load", () => {
   console.log(hours);
 });
 
+// track screen size. Can also try by using window.matchMedia
 window.addEventListener("resize", () => {
-  if ($(window).width() < 960) {
-    $(".the-league").addClass("col-4");
-  } else {
-    $(".the-league").removeClass("col-4");
-  }
-  console.log($(window).width());
+  // if (window.innerWidth < 768) {
+  //   $(".the-league").addClass("col-4");
+  // } else {
+  //   $(".the-league").removeClass("col-4");
+  // }
+
+  // if (window.innerWidth >= 960 && window.innerWidth <= 990) {
+  //   $(".navbar-collapse").css("margin-right", "50px");
+  // } else {
+  //   $(".navbar-collapse").css("margin-right", "");
+  // }
+  console.log(window.innerWidth);
 });
+
+//function, accept string (HTML)
+// div tag  is missing closing tag, the \
+//find and close all the div tags
+
+document.querySelectorAll("div");
+
+const closeTag = (tag) => {
+  let divArr = document.querySelectorAll("div");
+
+  for (let i = tag.length - 1; i > 0; i--) {
+    if (i % 2 == 1) {
+      divArr[i].replaceWith("span");
+    }
+  }
+};
