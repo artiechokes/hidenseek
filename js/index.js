@@ -33,18 +33,45 @@ window.addEventListener("resize", () => {
   console.log(window.innerWidth);
 });
 
-//function, accept string (HTML)
-// div tag  is missing closing tag, the \
-//find and close all the div tags
+//Collapse Hamburger
+$(document).on("click", function () {
+  $("#navbar-toggler").collapse("hide");
+});
 
-document.querySelectorAll("div");
+//collapse when clicking outside menu
+$(".nav-item").click(function () {
+  window.location = $(this).find("a").attr("href");
+  return false;
+});
 
-const closeTag = (tag) => {
-  let divArr = document.querySelectorAll("div");
+//match with media query
+const mql = window.matchMedia("(max-width:769px)");
 
-  for (let i = tag.length - 1; i > 0; i--) {
-    if (i % 2 == 1) {
-      divArr[i].replaceWith("span");
-    }
+mql.onchange = (event) => {
+  if (event.matches) {
+    $(".nav-item.the-league").addClass("d-flex align-items-center");
+  } else {
+    $(".nav-item.the-league").removeClass("d-flex align-items-center");
   }
 };
+
+//checks Media Query on Load
+const mqlOnLoad = () => {
+  if (mql.matches) {
+    $(".nav-item.the-league").addClass("d-flex align-items-center");
+  } else {
+    $(".nav-item.the-league").removeClass("d-flex align-items-center");
+  }
+};
+mqlOnLoad();
+
+//hamburger icon
+$(".navbar-toggler").on("click", () => {
+  if ($(".navbar-toggler .bi-list").length > 0) {
+    $(".navbar-toggler .bi").removeClass("bi-list");
+    $(".navbar-toggler .bi").addClass("bi-x");
+  } else {
+    $(".navbar-toggler .bi").removeClass("bi-x");
+    $(".navbar-toggler .bi").addClass("bi-list");
+  }
+});

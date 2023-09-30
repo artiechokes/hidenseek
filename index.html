@@ -11,43 +11,64 @@
 </head>
 
 <body>
-    <div class="container info-banner">
+    <div class="container-lg info-banner">
         <div class="row">
-            <div class="banner-item store-hours col-4 align">
+            <div class="banner-item store-hours col col-md-6 col-lg-4">
                 <p><i class="bi bi-clock"></i> Mon - Sun: 10AM - 10PM | <span class="store-status">NULL</span></p>
             </div>
-            <div class="banner-item store-location col-4 offset-2">
-                <p><i class="bi bi-shop"></i> 23 Sycamore Lane, Salt Middle, AL 05505</p>
+            <div class="banner-item store-location col col-lg-4 offset-lg-2">
+
+                <a href="https://maps.app.goo.gl/e8pJJid1teB7NVE78"><i class="bi bi-shop"></i> 1600 E Vaile Ave, Kokomo,
+                    IN 46901</a>
             </div>
-            <div class="banner-item telephone col-2">
-                <p><i class="bi bi-telephone"></i> (555) 555-5555</p>
+            <div class="banner-item telephone col">
+                <a href="tel:555-555-5555"><i class="bi bi-telephone"></i> (555) 555-5555</a>
             </div>
         </div>
     </div>
 
     <nav class="navbar navbar-expand-md navbar-light bgc-gray">
-        <div class="container">
+        <div class="container-lg">
             <a href="#" class="navbar-brand">
                 <img class="img-responsive" src="media\image\Hide N' Seek Logo@0.25x.png" alt=""></a>
 
-            <div class="navbar-collapse collapse">
-                <ul class="navbar-nav w-100 row justify-content-end">
-                    <li class="nav-item col-3"><a href="tickets.html" class="nav-link">Tickets</a></li>
-                    <li class="nav-item col-3"><a href="membership.html" class="nav-link">Membership</a></li>
-                    <li class="nav-item col-3"><a href="parties-and-groups.html" class="nav-link">Parties &amp
+            <!-- Hamburger Icon -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-toggler"
+                aria-controls="navbar-toggler" aria-expanded="true" aria-label="Toggle navigation">
+                <i class="bi bi-list"></i>
+            </button>
+
+            <div class="navbar-collapse collapse" id="navbar-toggler">
+
+                <!-- Full size Navbar -->
+                <ul class="navbar-nav row justify-content-end">
+                    <li class="nav-item col-3 d-flex align-items-center"><a href="tickets.html"
+                            class="nav-link">Tickets</a></li>
+                    <li class="nav-item col-3 d-flex align-items-center"><a href="membership.html"
+                            class="nav-link">Membership</a></li>
+                    <li class="nav-item col-3 d-flex align-items-center"><a href="parties-and-groups.html"
+                            class="nav-link">Parties &amp
                             Groups</a></li>
-                    <li class="nav-item col-3"><a href="game-modes.html" class="nav-link">Game Modes</a></li>
+                    <li class="nav-item col-3 d-flex align-items-center game-modes"><a href="game-modes.html"
+                            class="nav-link">Game
+                            Modes</a></li>
                     <li class="nav-item the-league">
                         <a href="the-league.html" class="nav-link">The League</a>
                     </li>
                 </ul>
             </div>
+
         </div>
+
     </nav>
 
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="node_modules/@popperjs/core/dist/umd/popper-base.js"></script>
     <script src="js/index.js"></script>
 </body>
 
