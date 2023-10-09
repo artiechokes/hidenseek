@@ -8,6 +8,19 @@ $warning: #ff0000;
 $success: #159e15;
 $light: #e9e9e9;
 
+body {
+  font-family: "kohinoor-odia", Arial, Helvetica, sans-serif;
+}
+
+.screen-size {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  padding: 10px;
+  background-color: #e2fc54;
+  font-weight: 900;
+}
+
 .container,
 .container-sm,
 .container-md,
@@ -89,7 +102,87 @@ $light: #e9e9e9;
   color: $warning;
   font-weight: 600;
 }
+.hero {
+  $a: 35vw;
+  $b: 120px;
+  padding: 0;
+  height: calc(#{$a} - #{$b});
+  min-height: 600px;
+  overflow: hidden;
+
+  .row {
+    height: 100%;
+    .col-5,
+    .col-7 {
+      height: 100%;
+    }
+  }
+  .image {
+    padding: 0;
+    overflow: hidden;
+
+    img {
+      min-height: 1000px;
+      width: 100%;
+      object-fit: cover;
+      object-position: 0px -400px;
+    }
+  }
+
+  .hero-text {
+    background-image: url(../media/image/Camo-2.png);
+    background-size: cover;
+    background-position: bottom;
+    position: relative;
+
+    .hero-title {
+      font-family: "Niveau Grotesk", Arial, Helvetica, sans-serif;
+      font-weight: 900;
+      font-size: 4em;
+      text-transform: uppercase;
+      text-align: right;
+      position: relative;
+      padding: 12px;
+      width: 100%;
+      top: 25%;
+      color: #000;
+    }
+
+    .hero-description {
+      font-weight: 700;
+      font-size: 1.5em;
+      text-align: right;
+      top: 23%;
+      position: relative;
+      color: #000;
+    }
+
+    .btn {
+      position: relative;
+      top: 25%;
+      font-size: 1rem;
+      font-weight: 700;
+
+      text-align: right;
+
+      border: 2px solid #fff;
+      background-color: $purple-100;
+      border-radius: 0;
+      padding: 15px 30px;
+      color: #fff;
+
+      &:hover {
+        background-color: #fff;
+        color: $purple-100;
+      }
+    }
+  }
+}
+
 @media screen and (min-width: 1200px) {
+  .screen-size:after {
+    content: "> 1200px";
+  }
   .navbar-nav {
     margin-right: 210px;
   }
@@ -101,8 +194,19 @@ $light: #e9e9e9;
   }
 
   @media screen and (max-width: 1200px) {
+    .screen-size:after {
+      content: "992 - 1200";
+      color: #ffa600;
+    }
+
     .navbar-nav {
       margin-right: 210px;
+    }
+
+    .hero .hero-text {
+      .hero-title {
+        font-size: 3.5em;
+      }
     }
   }
   .nav-item.the-league {
@@ -132,13 +236,29 @@ $light: #e9e9e9;
   }
 
   @media screen and (max-width: 992px) {
+    .screen-size:after {
+      content: "768 - 992";
+      color: #f841da;
+    }
+
     .nav-item.the-league {
       display: none;
+    }
+
+    .hero .hero-text {
+      .hero-title {
+        font-size: 3em;
+      }
     }
   }
 }
 
 @media screen and (max-width: 768px) {
+  .screen-size:after {
+    content: "< 768";
+    color: #159e15;
+  }
+
   .navbar-toggler {
     &:focus {
       box-shadow: none;

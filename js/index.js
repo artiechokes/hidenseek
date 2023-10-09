@@ -3,9 +3,9 @@ let day = date.getDay();
 let hours;
 $(".row").innerHTML = day;
 
-const storeStatus = window.addEventListener("load", () => {
+const load = window.addEventListener("load", () => {
   hours = date.getHours();
-  if (hours > 10 && hours < 22) {
+  if (hours >= 10 && hours < 22) {
     $(".bi-clock").addClass("store-open");
     $(".store-status").addClass("store-open");
     $(".store-status").text("OPEN");
@@ -14,23 +14,19 @@ const storeStatus = window.addEventListener("load", () => {
     $(".store-status").addClass("store-closed");
     $(".store-status").text("CLOSED");
   }
-  console.log(hours);
+
+  let width =
+    $(".hero-text").width() - document.querySelector(".info-banner").offsetLeft;
+  $(".hero-title").width(width - 24);
+  $(".hero-description").width(width - 24);
+  $(".btn").css("margin-left", width - 180);
 });
 
 // track screen size. Can also try by using window.matchMedia
 window.addEventListener("resize", () => {
-  // if (window.innerWidth < 768) {
-  //   $(".the-league").addClass("col-4");
-  // } else {
-  //   $(".the-league").removeClass("col-4");
-  // }
-
-  // if (window.innerWidth >= 960 && window.innerWidth <= 990) {
-  //   $(".navbar-collapse").css("margin-right", "50px");
-  // } else {
-  //   $(".navbar-collapse").css("margin-right", "");
-  // }
-  console.log(window.innerWidth);
+  if (window.innerWidth % 25 === 0) {
+    console.log(window.innerWidth);
+  }
 });
 
 //Collapse Hamburger
@@ -74,4 +70,14 @@ $(".navbar-toggler").on("click", () => {
     $(".navbar-toggler .bi").removeClass("bi-x");
     $(".navbar-toggler .bi").addClass("bi-list");
   }
+});
+
+// Hero Text Position
+
+window.addEventListener("resize", () => {
+  let width =
+    $(".hero-text").width() - document.querySelector(".info-banner").offsetLeft;
+  $(".hero-title").width(width - 24);
+  $(".hero-description").width(width - 24);
+  $(".btn").css("margin-left", width - 180);
 });
