@@ -60,6 +60,9 @@ body {
     img {
       height: 70px;
     }
+    .navbar-collapse {
+      z-index: 2;
+    }
 
     .nav-item {
       text-align: center;
@@ -138,7 +141,7 @@ body {
     .hero-title {
       font-family: "Niveau Grotesk", Arial, Helvetica, sans-serif;
       font-weight: 900;
-      font-size: 4em;
+      font-size: 3rem;
       text-transform: uppercase;
       text-align: right;
       position: relative;
@@ -150,7 +153,7 @@ body {
 
     .hero-description {
       font-weight: 700;
-      font-size: 1.5em;
+      font-size: 1.5rem;
       text-align: right;
       top: 23%;
       position: relative;
@@ -187,10 +190,19 @@ body {
     margin-right: 210px;
   }
 }
+
 @media screen and (min-width: 992px) {
   .navbar-collapse {
     position: absolute;
     right: 0;
+  }
+
+  .hero .hero-text {
+    font-size: 4rem;
+    color: red;
+    .hero-description {
+      background-color: #fff;
+    }
   }
 
   @media screen and (max-width: 1200px) {
@@ -205,7 +217,7 @@ body {
 
     .hero .hero-text {
       .hero-title {
-        font-size: 3.5em;
+        font-size: 3.5rem;
       }
     }
   }

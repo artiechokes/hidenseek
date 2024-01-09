@@ -12023,6 +12023,9 @@ body {
 .navbar .container-lg img {
   height: 70px;
 }
+.navbar .container-lg .navbar-collapse {
+  z-index: 2;
+}
 .navbar .container-lg .nav-item {
   text-align: center;
   padding: 0 15px;
@@ -12092,7 +12095,7 @@ body {
 .hero .hero-text .hero-title {
   font-family: "Niveau Grotesk", Arial, Helvetica, sans-serif;
   font-weight: 900;
-  font-size: 4em;
+  font-size: 3rem;
   text-transform: uppercase;
   text-align: right;
   position: relative;
@@ -12103,7 +12106,7 @@ body {
 }
 .hero .hero-text .hero-description {
   font-weight: 700;
-  font-size: 1.5em;
+  font-size: 1.5rem;
   text-align: right;
   top: 23%;
   position: relative;
@@ -12139,6 +12142,13 @@ body {
     position: absolute;
     right: 0;
   }
+  .hero .hero-text {
+    font-size: 4rem;
+    color: red;
+  }
+  .hero .hero-text .hero-description {
+    background-color: #fff;
+  }
 }
 @media screen and (min-width: 992px) and (max-width: 1200px) {
   .screen-size:after {
@@ -12149,7 +12159,7 @@ body {
     margin-right: 210px;
   }
   .hero .hero-text .hero-title {
-    font-size: 3.5em;
+    font-size: 3.5rem;
   }
 }
 @media screen and (min-width: 992px) {

@@ -19,7 +19,9 @@ const load = window.addEventListener("load", () => {
     $(".hero-text").width() - document.querySelector(".info-banner").offsetLeft;
   $(".hero-title").width(width - 24);
   $(".hero-description").width(width - 24);
-  $(".btn").css("margin-left", width - 180);
+  if (window.innerWidth > 992) {
+    $(".btn").css("left", width - 180);
+  }
 });
 
 // track screen size. Can also try by using window.matchMedia
@@ -79,5 +81,7 @@ window.addEventListener("resize", () => {
     $(".hero-text").width() - document.querySelector(".info-banner").offsetLeft;
   $(".hero-title").width(width - 24);
   $(".hero-description").width(width - 24);
-  $(".btn").css("margin-left", width - 180);
+  if (window.innerWidth > 992) {
+    $(".btn").css("left", width - 180);
+  }
 });
